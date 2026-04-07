@@ -90,6 +90,8 @@ For Typst syntax details, consult these files in the skill directory:
 - `references/diagrams.md` -- Diagrams with CeTZ, flowcharts with Fletcher, plots with plotst
 - `references/viewer.md` -- PDF viewer detection logic and supported viewers
 
+If the `typst` skill (apcamargo/typst-skills) is also installed, prefer its docs for in-depth syntax, styling, tables, and academic writing. Use the references above for math symbols, diagrams, and viewer detection -- topics it does not cover.
+
 ## Important
 
 - ALWAYS compile and verify the output before showing the user
