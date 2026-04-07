@@ -11,33 +11,51 @@ permissions:
 
 jobs:
   pre-commit:
+    name: "pre commit"
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
-          python-version: "3.x"
-      - uses: pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd # v3.0.1
+          persist-credentials: false
+
+      - uses: j178/prek-action@91fd7d7cf70ae1dee9f4f44e7dfa5d1073fe6623 # v1.0.11
 
   shellcheck:
+    name: "shellcheck"
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+        with:
+          persist-credentials: false
+
       - name: Run shellcheck
         run: shellcheck skills/typst-viewer/scripts/*.sh
 
   test-viewer-script:
+    name: "test viewer script (${{ matrix.os }})"
+
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
+
     runs-on: ${{ matrix.os }}
+
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+        with:
+          persist-credentials: false
+
       - name: Test script syntax
         run: bash -n skills/typst-viewer/scripts/open-pdf.sh
+
       - name: Test missing file error
         run: |
           ! bash skills/typst-viewer/scripts/open-pdf.sh nonexistent.pdf 2>/dev/null
+
       - name: Test no args error
         run: |
           ! bash skills/typst-viewer/scripts/open-pdf.sh 2>/dev/null
