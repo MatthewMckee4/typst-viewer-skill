@@ -5,8 +5,13 @@ Render complex maths, diagrams, and proofs as PDFs using [Typst](https://typst.a
 ## Installation
 
 ```bash
-git clone https://github.com/MatthewMckee4/typst-viewer-skill.git
-cp -r typst-viewer-skill/skills/typst-viewer ~/.claude/skills/
+npx skills add https://github.com/MatthewMckee4/typst-viewer-skill
+```
+
+Or manually:
+
+```bash
+git clone https://github.com/MatthewMckee4/typst-viewer-skill.git ~/.claude/skills/typst-viewer
 ```
 
 You'll also need the [Typst CLI](https://github.com/typst/typst/releases) installed (`brew install typst` on macOS, or `cargo install typst-cli`).
