@@ -7,12 +7,14 @@ Detect the user's OS and available PDF viewers, preferring dedicated readers ove
 ## Viewer Priority (by platform)
 
 ### macOS
+
 1. `sioyek` -- research-focused PDF reader
 2. `skim` -- `/Applications/Skim.app`
 3. `zathura`
 4. `open` -- system default (always available)
 
 ### Linux
+
 1. `sioyek`
 2. `zathura`
 3. `evince`
@@ -20,6 +22,7 @@ Detect the user's OS and available PDF viewers, preferring dedicated readers ove
 5. `xdg-open` -- desktop default (always available)
 
 ### Windows
+
 1. `sioyek`
 2. `SumatraPDF`
 3. `start` -- system default (always available)

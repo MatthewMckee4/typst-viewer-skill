@@ -108,7 +108,7 @@ $ mono(x) $      // monospace
 
 All available directly in math mode:
 
-```
+```text
 alpha beta gamma delta epsilon zeta eta theta iota kappa lambda
 mu nu xi pi rho sigma tau upsilon phi chi psi omega
 ```
@@ -120,39 +120,45 @@ Variants: `epsilon.alt, theta.alt, phi.alt, sigma.alt`
 ## Common Symbols
 
 ### Sets and Logic
-```
+
+```text
 in, in.not, subset, subset.eq, supset, supset.eq
 union, inter, union.big, inter.big, emptyset
 and, or, not, forall, exists, exists.not
 ```
 
 ### Arrows
-```
+
+```text
 arrow.r (->), arrow.l (<-), arrow.r.double (=>)
 arrow.l.r (<->), arrow.l.r.double (<=>), |-> (mapsto)
 ```
 
 ### Relations
-```
+
+```text
 eq (=), eq.not (!=), lt (<), gt (>), lt.eq (<=), gt.eq (>=)
 approx, equiv, tilde.eq, prop
 prec, succ, lt.double (<<), gt.double (>>)
 ```
 
 ### Calculus
-```
+
+```text
 integral, integral.double, integral.triple, integral.cont
 partial, dif, nabla, sum, product, infinity (oo)
 ```
 
 ### Dots
-```
+
+```text
 dots.h (...)       dots.h.c (cdots)     dots.v (vdots)
 dots.down (ddots)  dot.c (centered dot)
 ```
 
 ### Other
-```
+
+```text
 plus.minus (pm), minus.plus (mp), times, div
 star.op, compose, tack.r (turnstile), tack.r.double (models)
 ```
@@ -181,4 +187,3 @@ From @einstein we see...
 ```typst
 $ limits(sum)_0^n $    // force above/below positioning
 $ scripts(sum)_0^n $   // force side positioning
-```
