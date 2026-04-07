@@ -22,6 +22,16 @@ When you ask your AI agent to show you a derivation, proof, or diagram, this ski
 
 The skill includes reference docs for Typst's math syntax, document formatting, and diagram packages (CeTZ, Fletcher, plotst) so the agent can produce correct output without needing to look anything up.
 
+## Companion skills
+
+This skill handles the compile-and-view workflow. For comprehensive Typst authoring documentation (syntax, styling, tables, academic writing, packages), pair it with [typst-skills](https://github.com/apcamargo/typst-skills):
+
+```bash
+npx skills add https://github.com/apcamargo/typst-skills
+```
+
+Together they form a complete pipeline: write correct Typst (typst-skills) then compile and view (typst-viewer).
+
 ## License
 
 MIT
