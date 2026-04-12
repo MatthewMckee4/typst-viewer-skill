@@ -22,6 +22,14 @@ When you ask your AI agent to show you a derivation, proof, or diagram, this ski
 
 The skill includes reference docs for Typst's math syntax, document formatting, and diagram packages (CeTZ, Fletcher, plotst) so the agent can produce correct output without needing to look anything up.
 
+## Recommended CLAUDE.md rule
+
+To ensure the skill is used proactively (without needing to ask), add this to your `~/.claude/CLAUDE.md`:
+
+```
+- ALWAYS use the typst-viewer skill when answering mathematical questions involving equations.
+```
+
 ## Companion skills
 
 This skill handles the compile-and-view workflow. For comprehensive Typst authoring documentation (syntax, styling, tables, academic writing, packages), pair it with [typst-skills](https://github.com/apcamargo/typst-skills):
