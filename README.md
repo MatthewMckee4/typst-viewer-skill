@@ -26,7 +26,7 @@ The skill includes reference docs for Typst's math syntax, document formatting, 
 
 To ensure the skill is used proactively (without needing to ask), add this to your `~/.claude/CLAUDE.md`:
 
-```
+```markdown
 - ALWAYS use the typst-viewer skill when answering mathematical questions involving equations.
 ```
 
